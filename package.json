@@ -1,0 +1,34 @@
+{
+  "name": "laravel-elixir-system",
+  "version": "0.1.0",
+  "description": "Laravel Elixir extension to transform ES6 modules to System.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cretueusebiu/laravel-elixir-system.git"
+  },
+  "keywords": [
+    "gulp",
+    "laravel",
+    "elixir",
+    "system",
+    "es6"
+  ],
+  "author": "Cretu Eusebiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cretueusebiu/laravel-elixir-system/issues"
+  },
+  "homepage": "https://github.com/cretueusebiu/laravel-elixir-system#readme",
+  "dependencies": {
+    "babel-core": "^6.7.6",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-file": "^0.2.0",
+    "gulp-order": "^1.1.1",
+    "streamqueue": "^1.1.1"
+  }
+}
