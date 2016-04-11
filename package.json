@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Laravel Elixir extension to transform ES6 modules to System.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,8 @@
     "gulp-concat": "^2.6.0",
     "gulp-file": "^0.2.0",
     "gulp-order": "^1.1.1",
-    "streamqueue": "^1.1.1"
+    "streamqueue": "^1.1.1",
+    "babel-plugin-external-helpers": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.5.0"
   }
 }
