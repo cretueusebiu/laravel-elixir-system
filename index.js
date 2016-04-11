@@ -18,7 +18,7 @@ var plugins = Elixir.Plugins;
  * @param {Object} options
  */
 Elixir.extend('system', function (modules, output, baseDir, options) {
-    if (typeof baseDir == 'object') {
+    if (baseDir != null && typeof baseDir == 'object') {
         options = baseDir;
         baseDir = null;
     }
