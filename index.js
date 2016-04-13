@@ -25,7 +25,7 @@ Elixir.extend('system', function (modules, output, baseDir, options) {
 
     var babelOptions = Object.assign({}, {
         moduleIds: true,
-        plugins: ['external-helpers', 'transform-es2015-modules-systemjs']
+        plugins: ['external-helpers', 'transform-es2015-modules-systemjs', 'transform-object-assign']
     }, config.js.babel.options);
 
     options = Object.assign({}, {
