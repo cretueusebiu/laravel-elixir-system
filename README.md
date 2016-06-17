@@ -19,7 +19,7 @@ npm install --save-dev laravel-elixir-system
 - `output` - The resulting file to write to. Defaults to `public/js/bundle.js`.
 - `baseDir` - The base directory of the source files. Defaults to `resources/assets/js`.
 - `options` - An object of options:
-    - `includeHelpers` - Include Babel helpers. Default: `false`.
+    - `includeHelpers` - Include Babel helpers. Default: `true`.
 
 ## Example
 
