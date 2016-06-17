@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var babelCore = require('babel-core');
 var Elixir = require('laravel-elixir');
 var streamqueue = require('streamqueue');
+
 var config = Elixir.config;
 var plugins = Elixir.Plugins;
 
@@ -25,11 +26,17 @@ Elixir.extend('system', function (modules, output, baseDir, options) {
 
     var babelOptions = Object.assign({}, {
         moduleIds: true,
-        plugins: ['external-helpers', 'transform-es2015-modules-systemjs', 'transform-object-assign']
+        plugins: [
+            'external-helpers',
+            'transform-object-assign',
+            'babel-plugin-transform-react-jsx',
+            'transform-es2015-modules-systemjs'
+        ]
     }, config.js.babel.options);
 
     options = Object.assign({}, {
         babel: babelOptions,
+        includeHelpers: true,
         uglify: config.production,
         sourcemaps: !config.production
     }, options || {});
@@ -84,9 +91,9 @@ Elixir.extend('system', function (modules, output, baseDir, options) {
 /**
  * Prep the Gulp src and output paths.
  *
- * @param  {string|Array} src
- * @param  {string|null}  baseDir
- * @param  {string|null}  output
+ * @param  {String|Array} src
+ * @param  {String|null}  baseDir
+ * @param  {String|null}  output
  * @return {GulpPaths}
  */
 var prepGulpPaths = function (src, baseDir, output) {

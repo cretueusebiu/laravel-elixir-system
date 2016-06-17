@@ -23,6 +23,20 @@ npm install --save-dev laravel-elixir-system
 
 ## Example
 
+Let's say you have an app with some modules for the main component, some for the admin and some that are shared:
+
+```
+.
+├── app
+|   ├── App.js
+|   └── ModuleA.js 
+├── admin
+|   ├── App.js 
+|   └── ModuleB.js
+└── lib
+    └── ModuleC.js
+```
+
 ```javascript
 var elixir = require('laravel-elixir');
 
@@ -55,6 +69,12 @@ Then using the one of the polyfills:
 
 ```javascript
 var App = System.get('app/App').default;
+var ModuleA = System.get('app/ModuleA').default;
+var ModuleC = System.get('lib/ModuleC').default;
 
-var myapp = new App();
+var app = new App();
+var mA = new ModuleA();
+var mC = new ModuleC();
 ```
+
+See the [example](example) directory for a complete example.

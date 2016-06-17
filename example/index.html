@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Laravel Elixir System Example</title>
+</head>
+<body>
+    <p>
+        Open the Console in Chrome with:
+        <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">J</kbd> (Windows)
+        /
+        <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">J</kbd> (Mac)
+    </p>
+
+    <p>Expected output:</p>
+
+    <pre>
+App created!
+ModuleA created!
+ModuleC created!
+    </pre>
+
+    <script src="https://rawgit.com/caridy/es6-micro-loader/master/dist/system-polyfill.js"></script>
+    <script src="dist/app.js"></script>
+
+    <script>
+        var App = System.get('app/App').default;
+        var ModuleA = System.get('app/ModuleA').default;
+        var ModuleC = System.get('lib/ModuleC').default;
+
+        var app = new App();
+        var mA = new ModuleA();
+        var mC = new ModuleC();
+    </script>
+</body>
+</html>
